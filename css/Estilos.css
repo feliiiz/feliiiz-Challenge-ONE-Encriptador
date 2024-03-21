@@ -1,0 +1,275 @@
+/* Definición de variables CSS */
+:root {
+    --color-primario: #0a3871;
+    /* Color primario de Alura */
+    --color-texto-primario: #495057;
+    /* Color de texto primario de Alura */
+    --fuente-serif: sans-serif;
+    /* Fuente de tipo serif */
+}
+
+/* Estilos para las imágenes */
+img {
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+    /* Agrega una transición suave al efecto */
+}
+
+/* Efecto de escala al pasar el mouse sobre las imágenes */
+img:hover {
+    transform: scale(1.1);
+    /* Aumenta la escala en un 10% */
+}
+
+/* Estilos para el cuerpo */
+body {
+    background-color: #E5E5E5;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+}
+
+/* Estilos del logo de Alura */
+.logo__Alura {
+    width: 25px;
+    display: block;
+    margin: 15% auto;
+    animation: escala-izquierda .5s cubic-bezier(.25, .46, .45, .94);
+    /* Animación de escala hacia la izquierda */
+}
+
+@keyframes escala-izquierda {
+    0% {
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: 0 0;
+        opacity: 1;
+    }
+}
+
+/* Estilos del contenedor principal */
+.container {
+    margin-top: 90px;
+}
+
+/* Estilos del área de encriptación */
+.areaEncriptar {
+    color: var(--color-primario);
+    background: none;
+    border: 0;
+    resize: none;
+    font-family: var(--fuente-serif);
+    font-size: 25px;
+    width: 90%;
+    height: 65%;
+}
+
+.areaEncriptar::placeholder {
+    color: var(--color-primario);
+}
+
+.areaEncriptar:focus {
+    outline: 0;
+}
+
+/* Estilos para los textos */
+.alerta__text {
+    display: flex;
+}
+
+.img__alert {
+    display: block;
+    padding: 1%;
+}
+
+.texto {
+    display: inline-block;
+    color: var(--color-texto-primario);
+    font-family: var(--fuente-serif);
+}
+
+.text__bold {
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.tex_encriptado {
+    margin: 0 auto;
+    line-height: 30px;
+    height: 70%;
+    width: 90%;
+}
+
+/* Estilos para los botones */
+.botones {
+    width: 90%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonStyle {
+    width: 47%;
+    cursor: pointer;
+    font-family: var(--fuente-serif);
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.btn__encriptar,
+.btn__desencriptar {
+    max-width: 100%;
+    transition: transform 0.4s ease-in-out;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.btn__encriptar {
+    color: #fff;
+    background-color: var(--color-primario);
+    border: none;
+}
+
+.btn__encriptar:hover {
+    transform: scale(1.1);
+}
+
+.btn__desencriptar {
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    background-color: transparent;
+}
+
+.btn__desencriptar:hover {
+    transform: scale(1.1);
+}
+
+.boton__aside {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 15px 10px;
+}
+
+/* Estilos para el aside */
+.cuadro__aside {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 1px 1px 30px 1px rgb(215, 208, 208);
+    border-radius: 23px;
+    padding: 15px;
+    margin: 7% 9% 0;
+    height: 85vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.txtcopiado {
+    position: absolute;
+    bottom: 120px;
+    left: 37%;
+    background-color: var(--color-primario);
+    padding: 5px;
+    width: 70px;
+    font-size: 15px;
+    color: #fff;
+    font-family: var(--fuente-serif);
+    border-radius: 20px;
+}
+
+/* Media queries para tablet */
+@media screen and (max-width: 1024px) {
+    body {
+        display: block;
+        padding: 3%;
+    }
+
+    .logo__Alura {
+        width: 35px;
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 70px;
+        margin: 1px auto;
+    }
+
+    .contente__alura {
+        position: relative;
+        height: 50px;
+    }
+
+    .container {
+        margin-top: 190px;
+    }
+
+    .areaEncriptar {
+        font-size: 40px;
+        width: 100%;
+        height: 40vh;
+    }
+
+    .botonStyle {
+        font-size: 25px;
+    }
+
+    .botones {
+        width: 100%;
+    }
+
+    .tex_encriptado {
+        font-size: 35px;
+    }
+
+    .text__1 {
+        font-size: 25px;
+    }
+
+    .img__munieco {
+        display: none;
+    }
+
+    .cuadro__aside {
+        margin: 3% 1%;
+        height: auto;
+    }
+
+    .tex_encriptado {
+        height: 30vh;
+        width: 100%;
+    }
+}
+
+/* Media queries para celular */
+@media screen and (max-width: 601px) {
+    .botones {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .botonStyle {
+        width: 90%;
+        margin: 10px 0px;
+        font-size: 30px;
+        padding: 25px 10px;
+    }
+}
+
+/* Clases para mostrar y ocultar */
+.mostrar {
+    display: block;
+}
+
+.ocultar {
+    display: none;
+}

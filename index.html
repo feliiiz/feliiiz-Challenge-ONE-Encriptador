@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Estandar.css" />
+    <!-- Enlace al archivo de estilos estándar -->
+    <link rel="stylesheet" href="css/Estilos.css" />
+    <!-- Enlace al archivo de estilos personalizados -->
+    <title>Encriptador de texto</title>
+  </head>
+  <body>
+    <div class="contente__alura">
+      <img
+        src="Imagenes/logo__alura.svg"
+        alt="imagen de logo de Alura"
+        class="logo__Alura"
+      />
+      <!-- Logo de Alura -->
+    </div>
+    <!-- principal -->
+    <div class="container">
+      <textarea
+        name="textEncriptar"
+        id="areaEncriptar"
+        class="areaEncriptar"
+        placeholder="Ingrese el texto aquí"
+      ></textarea>
+      <!-- Área para ingresar texto a encriptar -->
+      <div class="alerta__text">
+        <img
+          src="Imagenes/alert.svg"
+          alt="imagen de alerta"
+          class="img__alert"
+        />
+        <!-- Imagen de alerta -->
+        <p class="texto">Solo letras minúsculas y sin acentos</p>
+        <!-- Texto de advertencia -->
+      </div>
+      <div class="botones">
+        <button class="botonStyle btn__encriptar">Encriptar</button>
+        <!-- Botón para encriptar -->
+        <button class="botonStyle btn__desencriptar">Desencriptar</button>
+        <!-- Botón para desencriptar -->
+      </div>
+    </div>
+
+    <!-- aside -->
+    <aside class="cuadro__aside">
+      <textarea
+        name="texto encriptado"
+        class="areaEncriptar tex_encriptado texto ocultar"
+      ></textarea>
+      <!-- Área para mostrar el texto encriptado -->
+      <img
+        src="Imagenes/Muñeco.svg"
+        alt="imagen de Muñeco"
+        class="img__munieco elements"
+      />
+      <!-- Imagen de un muñeco -->
+      <p class="texto text__bold text__1 elements">
+        Ningún mensaje fue encontrado
+      </p>
+      <!-- Texto de mensaje predeterminado -->
+      <p class="texto text__1 elements">
+        Ingresa el texto que desees encriptar o desencriptar.
+      </p>
+      <!-- Texto de instrucción -->
+      <p class="txtcopiado ocultar">copiado</p>
+      <!-- Texto de confirmación de copia -->
+      <button class="botonStyle btn__desencriptar boton__aside ocultar">
+        Copiar
+      </button>
+      <!-- Botón para copiar el texto encriptado -->
+    </aside>
+
+    <script src="Script.js"></script>
+    <!-- Enlace al archivo de script -->
+  </body>
+</html>
